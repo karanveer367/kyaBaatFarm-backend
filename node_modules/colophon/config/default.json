@@ -1,0 +1,7 @@
+{
+	"DEFAULT": "default"
+, "OVERRIDE": "default"
+, "NESTED": {
+	  "SETTING": "default"
+	}
+}

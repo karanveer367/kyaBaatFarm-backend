@@ -1,0 +1,7 @@
+{
+	"ENVIRONMENT": "environment"
+, "OVERRIDE": "environment"
+, "NESTED": {
+	  "ANOTHER": "environment"
+	}
+}
