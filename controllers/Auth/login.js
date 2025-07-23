@@ -1,6 +1,3 @@
-const registerModel = require("../../models/register.model");
-
-const router = require("express").Router();
 // first step
 // we have to validagte data of frontend(order) or request data
 //second step
@@ -9,11 +6,12 @@ const router = require("express").Router();
 //data save in mongo db
 //fourth step
 //send response to frontend
+const registerModel = require("../../models/register.model");
+
+const router = require("express").Router();
 const login = async (req, res, next) => {
   try {
     const result = await req.body;
-    // console.log(result);
-    // console.log(req.body);
     const { email, password } = result;
 
     const emailExists = await registerModel.findOne({ email: email });
@@ -25,12 +23,13 @@ const login = async (req, res, next) => {
       });
     }
 
-    if (!email) {
-      return res.status(400).json({
-        message: "Email doesn't exit",
-        success: false,
-      });
-    }
+  const { email: userEmail, password: userPassword } = result;
+    // if (!email) {
+    //   return res.status(400).json({
+    //     message: "Email doesn't exit",
+    //     success: false,
+    //   });
+    // }
 
     return res.status(200).json({
       message: "Login successful",
