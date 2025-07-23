@@ -1,9 +1,10 @@
 const mongoose = require("mongoose"); //Backend
 const express = require("express");
 const cors = require("cors");
-const routes = require("./routes/api/index");
+const routes = require("./routes/index");
 const backend = express();
 const http = require("http").Server(backend);
+const path = require("path");
 
 
 backend.use(express.json()); //data in json form
@@ -13,9 +14,7 @@ backend.use(
   })
 );
 
-
-
-
+backend.use("/uploads", express.static(path.join(__dirname, "uploads")));
 backend.use(routes);
 
 //Step 1 to connect to the databasen,mm,mbnmbnmbnm

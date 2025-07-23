@@ -3,6 +3,6 @@ const authroutes = require("./Auth.routes");
 const productsroutes = require("./Products.routes");
 
 router.use("/auth", authroutes);
-router.use("/products", productsroutes);
+router.use("/product",productsroutes);
 
 module.exports = router;
