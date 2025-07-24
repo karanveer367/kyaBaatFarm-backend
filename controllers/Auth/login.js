@@ -12,6 +12,7 @@ const router = require("express").Router();
 const login = async (req, res, next) => {
   try {
     const result = await req.body;
+    
     const { email, password } = result;
 
     const emailExists = await registerModel.findOne({ email: email });

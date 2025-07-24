@@ -23,4 +23,4 @@ const productSchema = new mongoose.Schema({
     required: true }, // file path or URL
 });
 
-module.exports = mongoose.model("Product", productSchema);
+module.exports = mongoose.model("Product", productSchema,"Product");

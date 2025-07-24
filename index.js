@@ -13,8 +13,6 @@ backend.use(
     origin: "*",
   })
 );
-
-backend.use("/uploads", express.static(path.join(__dirname, "uploads")));
 backend.use(routes);
 
 //Step 1 to connect to the databasen,mm,mbnmbnmbnm
